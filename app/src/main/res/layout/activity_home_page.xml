@@ -45,14 +45,21 @@
                 android:layout_marginBottom="12dp"
                 android:textColor="@color/indigo_400"/>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvMovies"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:spanCount="2"
-                android:layout_gravity="center_horizontal"
-                />
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvMovies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2"
+                    android:layout_gravity="center"
+                    />
+            </FrameLayout>
+
 
         </LinearLayout>
 

@@ -18,12 +18,12 @@ class HomePageActivity : AppCompatActivity() {
 
 
         val movieList = mutableListOf(
-            Movie("Finding Nemo",R.drawable.nemo, R.string.desc, 4.9,listOf("Kids", "Animation")),
-            Movie("Finding Dory",R.drawable.dory,R.string.desc, 4.8,listOf("Kids", "Animation")),
-            Movie("Aladdin",R.drawable.aladdin,R.string.desc, 4.9,listOf("Kids", "Animation")),
-            Movie("Toy Story",R.drawable.toystory,R.string.desc, 4.9,listOf("Kids", "Animation")),
-            Movie("Toy Story 3",R.drawable.toystory3,R.string.desc, 4.9,listOf("Kids", "Animation")),
-            Movie("Luca",R.drawable.luca,R.string.desc, 4.9,listOf("Kids", "Animation")),
+            Movie("Finding Nemo",R.drawable.nemo, R.string.desc, 4.9,"Andrew Stanton",listOf("Kids", "Animation")),
+            Movie("Finding Dory",R.drawable.dory,R.string.desc, 4.8,"Andrew Stanton",listOf("Kids", "Animation")),
+            Movie("Aladdin",R.drawable.aladdin,R.string.desc, 4.6,"Guy Ritchie",listOf("Kids", "Animation")),
+            Movie("Toy Story",R.drawable.toystory,R.string.desc, 4.9,"John Lasseter, Tim Allen, Andrew Stanton",listOf("Kids", "Animation")),
+            Movie("Toy Story 3",R.drawable.toystory3,R.string.desc, 4.9,"Lee Unkrich",listOf("Kids", "Animation")),
+            Movie("Luca",R.drawable.luca,R.string.desc, 4.9,"Enrico Casarosa, Luca Guadagnino",listOf("Kids", "Animation")),
         )
 
 

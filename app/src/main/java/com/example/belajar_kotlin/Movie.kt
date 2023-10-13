@@ -7,5 +7,6 @@ data class Movie(
     val imageResourceId: Int,
     val desc: Int,
     val rate: Double,
+    val director:String,
     val genres: List<String>
 ): Serializable

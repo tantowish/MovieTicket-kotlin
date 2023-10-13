@@ -22,7 +22,14 @@ class MovieDetail : AppCompatActivity() {
             image.setImageResource(movie.imageResourceId)
             tvTitle.text = movie.title
             tvDesc.setText(movie.desc)
-            tvRate.text="Rate : "+ movie.rate
+            tvRate.text = ""+movie.rate
+            tvDirector.text = "Director : "+movie.director
+
+            btnTicket.setOnClickListener {
+                val intent = Intent(this@MovieDetail, Payment::class.java)
+                intent.putExtra("movieData", movie)
+                startActivity(intent)
+            }
         }
     }
 }
