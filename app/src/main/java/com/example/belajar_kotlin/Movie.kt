@@ -1,9 +1,11 @@
 package com.example.belajar_kotlin
 
-data class Movie (
+import java.io.Serializable
+
+data class Movie(
     val title: String,
     val imageResourceId: Int,
-    val desc: String,
-    val rate: Int,
+    val desc: Int,
+    val rate: Double,
     val genres: List<String>
-)
+): Serializable

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MovieDetail"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_margin="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        >
+
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&lt;"
+            android:textSize="36dp"
+            android:fontFamily="@font/poppinsextrabold"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Movie Detail"
+            android:gravity="center"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppinsextrabold"
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:src="@drawable/nemo"
+        android:layout_gravity="center_horizontal"
+        />
+    <LinearLayout
+        android:layout_margin="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_marginTop="12dp"
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Finding Nemo"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:fontFamily="@font/poppinsextrabold"
+            />
+        <TextView
+            android:id="@+id/tvDirector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Director :"
+            android:fontFamily="@font/poppinsregular"
+            android:textSize="16dp"
+            />
+        <TextView
+            android:id="@+id/tvRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rate :"
+            android:fontFamily="@font/poppinsregular"
+            android:textSize="16dp"
+            />
+
+        <TextView
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Storyline"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:fontFamily="@font/poppinsextrabold"
+            />
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lorem Ipsum"
+            android:fontFamily="@font/poppinsregular"
+            android:textSize="16dp"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginTop="24dp"
+            android:id="@+id/btnTicket"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Get Ticket"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:background="@drawable/button"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

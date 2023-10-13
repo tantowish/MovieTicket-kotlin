@@ -4,19 +4,32 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.belajar_kotlin.databinding.ItemMovieBinding
+
+
 
 class MovieAdapter(
-    var movies: List<Movie>
+    var movies: List<Movie>,
+    private var onItemClickListener: ((Movie) -> Unit)? = null
 ) : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
-    inner class MovieViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+
+    inner class MovieViewHolder(val binding:ItemMovieBinding) : RecyclerView.ViewHolder(binding.root)
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_movie, parent, false)
-        return MovieViewHolder(view)
+        val layoutInflater = LayoutInflater.from(parent.context)
+        val binding = ItemMovieBinding.inflate(layoutInflater, parent, false)
+        return MovieViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
-        holder.itemView.
+        holder.binding.apply {
+            image.setImageResource(movies[position].imageResourceId)
+            tvTitle.text = movies[position].title
+            root.setOnClickListener {
+                onItemClickListener?.invoke(movies[position])
+            }
+        }
     }
 
     override fun getItemCount(): Int {
