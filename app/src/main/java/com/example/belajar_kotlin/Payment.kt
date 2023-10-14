@@ -58,6 +58,7 @@ class Payment : AppCompatActivity() {
                     val selectedSeatPrice = seatPrices[position]
                     tvPriceSet.text = "Rp$selectedSeatPrice"
                     tvTotPrice.text = tvPriceSet.text
+                    tvSeatSet.text = spinnerSeat.selectedItem.toString() +" seat"
                 }
 
                 override fun onNothingSelected(p0: AdapterView<*>?) {
