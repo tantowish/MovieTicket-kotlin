@@ -26,6 +26,7 @@ class MovieAdapter(
         holder.binding.apply {
             image.setImageResource(movies[position].imageResourceId)
             tvTitle.text = movies[position].title
+            tvStar.text = movies[position].rate.toString()
             root.setOnClickListener {
                 onItemClickListener?.invoke(movies[position])
             }

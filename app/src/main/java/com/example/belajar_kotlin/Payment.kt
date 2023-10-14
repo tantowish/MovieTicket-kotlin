@@ -100,7 +100,13 @@ class Payment : AppCompatActivity() {
                 val selectedDate = tvTanggalSet.text.toString()
                 val selectedAccNumber = accNumber.text.toString()
                 val selectedPayment = spinnerPayment.selectedItem.toString()
-                val selectedPaymentPick = spinnerPaymentPick.selectedItem.toString()
+                var selectedPaymentPick = spinnerPaymentPick.selectedItem
+                if(selectedPaymentPick != null){
+                    selectedPaymentPick = selectedPaymentPick.toString()
+                }
+                else{
+                    selectedPaymentPick = "Select"
+                }
                 val selectedBioskop = spinnerBioskop.selectedItem.toString()
                 val selectedSeat = spinnerSeat.selectedItem.toString()
 

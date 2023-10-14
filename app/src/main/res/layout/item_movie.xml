@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="8dp"
     android:orientation="vertical"
-    android:padding="8dp"
+    android:padding="4dp"
     >
 
     <ImageView
@@ -19,6 +19,29 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppinsextrabold"
         android:text="Finding Nemo"
+        android:textColor="@color/black"
         android:textSize="18dp" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/star"
+            android:layout_marginRight="4dp"
+            android:layout_gravity="center_vertical" />
+        <TextView
+            android:id="@+id/tvStar"
+            android:fontFamily="@font/poppinssemibold"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="4.9"
+            android:layout_gravity="center_vertical"
+            />
+    </LinearLayout>
 </LinearLayout>

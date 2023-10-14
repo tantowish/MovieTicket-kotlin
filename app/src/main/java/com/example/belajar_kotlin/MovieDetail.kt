@@ -15,7 +15,10 @@ class MovieDetail : AppCompatActivity() {
         setContentView(binding.root)
         val movie = intent.getSerializableExtra("movieData") as Movie
 
+        val adapter = GenreAdapter(movie.genres)
+
         with(binding){
+            rvGenre.adapter = adapter
             tvBack.setOnClickListener{
                 finish()
             }

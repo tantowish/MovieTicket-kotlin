@@ -13,6 +13,12 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.05" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hor1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/horEnd"
@@ -34,6 +40,7 @@
         app:layout_constraintGuide_percent="0.9" />
 
     <LinearLayout
+        android:id="@+id/tvActivity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/horStart"
@@ -62,7 +69,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hor1"
         app:layout_constraintBottom_toTopOf="@id/btnTicket"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -71,12 +78,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/hor1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.15" />
+
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/hor2"
                 android:layout_width="wrap_content"
@@ -89,6 +91,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 app:layout_constraintGuide_percent="0.95" />
+
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/verStart2"
                 android:layout_width="wrap_content"
@@ -109,7 +112,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="12dp"
                 android:src="@drawable/nemo"
-                app:layout_constraintTop_toBottomOf="@+id/hor1"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 />
@@ -166,6 +169,21 @@
                 app:layout_constraintLeft_toLeftOf="@id/verStart2"
                 app:layout_constraintRight_toRightOf="@id/verEnd2"/>
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvGenre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvDirector"
+                app:layout_constraintLeft_toLeftOf="@id/verStart2"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="3"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:clipToPadding="false"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                />
+
             <TextView
                 android:id="@+id/tvStory"
                 android:layout_width="wrap_content"
@@ -175,7 +193,7 @@
                 android:text="Storyline"
                 android:textSize="24dp"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/tvDirector"
+                app:layout_constraintTop_toBottomOf="@id/rvGenre"
                 app:layout_constraintLeft_toLeftOf="@id/verStart2"/>
 
             <TextView

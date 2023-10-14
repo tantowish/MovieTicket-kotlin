@@ -14,6 +14,7 @@ class HomePageActivity : AppCompatActivity() {
 
         binding = ActivityHomePageBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         val username = intent.getStringExtra("usn")
 
 
